@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
     public int score;
     [Header("最高分數")]
     public int scoreHeight;
+    [Header("水管")]
+    // GameObject 可以存放場景上的遊戲物件與專案內的預製物
+    public GameObject pipe;
 
     // 修飾詞權限：
     // private 其他類別無法使用
@@ -32,7 +35,9 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void SpawnPipe()
     {
-
+        print("生水管~");
+        // 生成(物件);
+        Instantiate(pipe);
     }
 
     /// <summary>
@@ -41,5 +46,11 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
 
+    }
+
+    private void Start()
+    {
+        // 重複調用("方法名稱"，開始時間，間隔時間)
+        InvokeRepeating("SpawnPipe", 0, 1.5f);
     }
 }

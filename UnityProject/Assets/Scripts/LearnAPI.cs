@@ -8,6 +8,8 @@ public class LearnAPI : MonoBehaviour
 
     public Camera cam;
 
+    public AudioSource aud;
+
     private void Start()
     {
         // 使用靜態成員 - 屬性
@@ -30,6 +32,8 @@ public class LearnAPI : MonoBehaviour
 
         cam.depth = 10;
         print("攝影機深度：" + cam.depth);
+
+        aud.Stop();
     }
 
     private void Update()
