@@ -3,7 +3,7 @@
 public class Ground : MonoBehaviour
 {
     [Header("移動速度"), Range(0, 200)]
-    public int speed = 10;
+    public int speed = 7;
 
     [Header("變型元件")]
     public Transform ground;
